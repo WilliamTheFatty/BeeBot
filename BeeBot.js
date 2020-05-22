@@ -7,7 +7,7 @@ bot.on("message", function(msg){
 	if (msg.cleanContent == "Bee Movie script, please."){
 		console.log("Command fired by " + msg.author.name + "! Posting Script...");
 		var i = 0;
-		var running = setInterval( scriptFunction, 1000);
+		var running = setInterval( scriptFunction, 2000);
 		function scriptFunction(){
 		  var line = script[i];
 		  bot.sendMessage(msg.channel,line,{},function(err,sendmsg){
@@ -22,4 +22,4 @@ bot.on("ready", function(){
 	console.log("BeeBot is running!");
 })
 
-bot.loginWithToken("Mjg4MjM5NjIxMzQ1OTAyNjAy.XsdMgQ.53PBTY2wzkzedGt0LBZXs996yDI");
+bot.loginWithToken("TOKEN HERE");
